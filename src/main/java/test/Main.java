@@ -1,90 +1,37 @@
 package test;
 
-
-import entities.Reservation;
-import entities.Ticket;
-import services.ServiceReservation;
-import services.ServiceTicket;
-import utils.MyDB;
+import entities.Commande;
+import entities.Produit;
+import services.ServiceCommande;
+import services.ServiceProduit;
 
 import java.sql.SQLException;
 
-public class Main {
-    public static void main(String[] args) {
-        MyDB db1 = MyDB.getInstance();
+public class main {
+    public static void main (String[] args){
+        /*MyDB db1 =  MyDB.getInstance();
+        MyDB db2 =  MyDB.getInstance();
+
 
         System.out.println(db1.hashCode());
+        System.out.println(db2.hashCode());*/
+        Produit p1 = new Produit("roua",55,"azertyu",4);
+        Produit p2 = new Produit("YOSSRAooo",56,"dfghjkl",5);
+        Commande c1=new Commande(1,"dfhjdfj",6,"ff","fhf");
 
-        Ticket t1 = new Ticket(1,1,11,15);
-        Ticket t2 = new Ticket(2,2,303,40);
-
-        Reservation r1= new Reservation(1,"15/2/2002");
-        Reservation r2= new Reservation(3,"19/4/2021");
-
-        ServiceTicket services = new ServiceTicket();
-        ServiceReservation serviceReservation = new ServiceReservation();
-        // ajouter les Ticket
-
-       /*  try{
-            services.ajouter(t1);
-            services.ajouter(t2);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        } */
-
-        // ajouter les RESERVATION
-        try{
-            serviceReservation.ajouter(r1);
-            serviceReservation.ajouter(r2);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-
-
-        //supprimer TICKET
-
-        /*try {
-            services.supprimer(t1);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }*/
-
-        //supprimer RESERVATION
-
-        /*try {
-            serviceReservation.supprimer(r1);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }*/
-        // AFFICHER TICKETS
-
+        ServiceProduit service=new ServiceProduit();
+        ServiceCommande comm=new ServiceCommande();
+        // ajouter les personnes
         try {
-            System.out.println(services.afficher());
+            service.ajouter(p1);
+            service.ajouter(p2);
+            comm.ajouter(c1);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+
         }
-
-        // AFFICHER RESERVATION
-
-        try {
-            System.out.println(serviceReservation.afficher());
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-
-          // modification Ticket
-       /* try {
-            services.modifier(t2);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }*/
-        // modification  reservation
-       /* try {
-            serviceReservation.modifier(r2);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }*/
 
 
     }
 }
+
