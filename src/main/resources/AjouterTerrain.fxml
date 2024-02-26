@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterTerrain">
+    <children>
+        <AnchorPane layoutX="-26.0" prefHeight="400.0" prefWidth="181.0" style="-fx-background-color: #CF152B;">
+         <children>
+            <ImageView fitHeight="124.0" fitWidth="124.0" layoutX="22.0" layoutY="6.0">
+               <image>
+                  <Image url="@../../../../../Downloads/422210411_1471517896731297_5964747758179693986_n%20(1).png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+        <AnchorPane layoutX="155.0" layoutY="-7.0" prefHeight="407.0" prefWidth="482.0" style="-fx-background-color: #03224C;">
+            <children>
+                <TextField fx:id="idt" layoutX="285.0" layoutY="66.0" promptText="id" />
+                <TextField fx:id="nomt" layoutX="285.0" layoutY="102.0" promptText="nom" />
+                <TextField fx:id="localisationt" layoutX="285.0" layoutY="138.0" promptText="localisation" />
+                <TextField fx:id="capacitet" layoutX="285.0" layoutY="178.0" promptText="capacite" />
+                <Text fill="WHITE" layoutX="314.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AJOUTER Terrain" />
+                <Text fill="WHITE" layoutX="207.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id" />
+                <Text fill="WHITE" layoutX="200.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom" />
+                <Text fill="WHITE" layoutX="201.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="localisation" />
+                <Text fill="WHITE" layoutX="202.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="capacite" />
+                <Button fx:id="ajouter_button_ev" layoutX="325.0" layoutY="227.0" mnemonicParsing="false" onAction="#ajoutereq" text="ajouter" />
+                <Button layoutX="324.0" layoutY="280.0" mnemonicParsing="false" onAction="#afficherbtn" text="afficher" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

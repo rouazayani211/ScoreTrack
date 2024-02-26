@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.modifierTerrain">
+    <children>
+        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <AnchorPane layoutX="-26.0" layoutY="-11.0" prefHeight="411.0" prefWidth="182.0" style="-fx-background-color: #CF152B;">
+               <children>
+                  <ImageView fitHeight="132.0" fitWidth="132.0" layoutX="14.0">
+                     <image>
+                        <Image url="@../../../../../Downloads/422210411_1471517896731297_5964747758179693986_n%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+                <AnchorPane layoutX="156.0" layoutY="-11.0" prefHeight="411.0" prefWidth="482.0" style="-fx-background-color: #03224C;">
+                    <children>
+                        <TextField fx:id="idt" layoutX="290.0" layoutY="49.0" promptText="id" />
+                        <TextField fx:id="nomt" layoutX="289.0" layoutY="93.0" promptText="nom" />
+                        <TextField fx:id="localisationt" layoutX="289.0" layoutY="137.0" promptText="date" />
+                        <TextField fx:id="capacitet" layoutX="290.0" layoutY="180.0" promptText="prix" />
+                        <Text fill="WHITE" layoutX="227.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id" />
+                        <Text fill="WHITE" layoutX="221.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom" />
+                        <Text fill="WHITE" layoutX="214.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="localisation" />
+                        <Text fill="WHITE" layoutX="211.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="capacite" />
+                        <Button fx:id="modifier_button_eq" layoutX="308.0" layoutY="283.0" mnemonicParsing="false" onAction="#modifierreq" text="modifier" />
+                        <Text fill="WHITE" layoutX="308.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MODIFIER TERRAIN" />
+                    </children></AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
