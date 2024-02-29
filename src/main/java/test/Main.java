@@ -1,90 +1,85 @@
 package test;
 
-
-import entities.Reservation;
-import entities.Ticket;
-import services.ServiceReservation;
-import services.ServiceTicket;
-import utils.MyDB;
+import entities.Admin;
+import entities.Utilisateur;
+import service.ServiceUtilisateur;
+import service.Serviceadmin;
 
 import java.sql.SQLException;
 
 public class Main {
-    public static void main(String[] args) {
-        MyDB db1 = MyDB.getInstance();
+    public static void main(String[] args){
+        /*MyDB db1 =MyDB.getInstance();
+        MyDB db2 =MyDB.getInstance();
 
         System.out.println(db1.hashCode());
+        System.out.println(db2.hashCode());*/
+       // Utilisateur u1 = new Utilisateur("nouhe","hamdi","azertyu","test","29/07/2001","admin");
+        //Utilisateur u2 = new Utilisateur("syrine","syrine","dfghjkl","test","9/06/2002","admin");
+        //Admin a1= new Admin("nounou","hamdi","fghjklm","9/07/2001","xxxxx","admin");
+       // Utilisateur u= new Utilisateur ("khadija","cccc","fghjklm","ccccc","9/07/2001","admin");
+        ServiceUtilisateur service = new ServiceUtilisateur();
+        Serviceadmin serviceadmin= new Serviceadmin();
+        // ajouter les utilisateurs
+       /*try {
 
-        Ticket t1 = new Ticket(1,1,11,15);
-        Ticket t2 = new Ticket(2,2,303,40);
-
-        Reservation r1= new Reservation(1,"15/2/2002");
-        Reservation r2= new Reservation(3,"19/4/2021");
-
-        ServiceTicket services = new ServiceTicket();
-        ServiceReservation serviceReservation = new ServiceReservation();
-        // ajouter les Ticket
-
-       /*  try{
-            services.ajouter(t1);
-            services.ajouter(t2);
+           System.out.println("user added successfully.");
+           service.Ajouter(u);
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        } */
+          System.out.println(e.getMessage());
+        }*/
 
-        // ajouter les RESERVATION
-        try{
-            serviceReservation.ajouter(r1);
-            serviceReservation.ajouter(r2);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-
-
-        //supprimer TICKET
-
+        // ajouter les admins
         /*try {
-            services.supprimer(t1);
+            System.out.println("Admin added successfully.");
+            serviceadmin.Ajouter(a1);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }*/
 
-        //supprimer RESERVATION
 
+        // afficher les utilisateurs
         /*try {
-            serviceReservation.supprimer(r1);
+            System.out.println(service.Afficher());
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }*/
-        // AFFICHER TICKETS
 
+        // afficher les admins
+        /*try {
+            System.out.println(serviceadmin.Afficher());
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }*/
+       /* // modification les utilisateurs
         try {
-            System.out.println(services.afficher());
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-
-        // AFFICHER RESERVATION
-
-        try {
-            System.out.println(serviceReservation.afficher());
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-
-          // modification Ticket
-       /* try {
-            services.modifier(t2);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }*/
-        // modification  reservation
-       /* try {
-            serviceReservation.modifier(r2);
+            service.Modifier(u2);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }*/
 
+
+        // modification les admins
+       /* try {
+            serviceadmin.Modifier(a1);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }*/
+
+
+        //supprimer les utilisateur
+       /* try {
+            service.Supprimer(u);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }*/
+
+        //supprimer les admins
+      /*  try {
+            serviceadmin.Supprimer();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }*/
 
     }
 }
